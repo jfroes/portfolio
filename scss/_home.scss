@@ -157,6 +157,9 @@
   margin-top: 200px;
   padding-bottom: 200px;
 
+  .swiper-pagination-bullet-active {
+    background: $rosa;
+  }
   .projetos-info {
     text-align: center;
     h1 {
