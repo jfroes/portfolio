@@ -1,0 +1,115 @@
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+  h1 {
+    @include fonte-1(38);
+    font-weight: 500;
+    color: $rosa;
+  }
+
+  .menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    a {
+      @include fonte-2(20);
+      padding: 5px 10px;
+      color: $cinza;
+      &:hover {
+        color: $rosa;
+      }
+    }
+
+    ul li.current_page_item a {
+      color: #e70faa;
+    }
+
+    //responsivo
+    @include dispositivo(mobile) {
+      gap: 20px;
+
+      li a {
+        background: transparentize($cinza, $amount: 0.9);
+        border-radius: 8px;
+        color: $azul-escuro;
+        &:hover {
+          background: transparentize($azul-escuro, $amount: 0.9) !important;
+          color: $azul-escuro;
+        }
+      }
+
+      .menu ul {
+        gap: 20px;
+      }
+    }
+  }
+
+  .botao {
+    cursor: pointer;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .show {
+    display: block;
+  }
+
+  //responsivo
+
+  @include dispositivo(tablet) {
+    justify-content: center;
+    flex-direction: column;
+    .header-menu {
+      margin-top: 30px;
+      gap: 15px;
+    }
+
+    li a {
+      background: transparentize($cinza, $amount: 0.9);
+      border-radius: 8px;
+      background-clip: none;
+      color: $azul-escuro;
+      &:hover {
+        background: transparentize($azul-escuro, $amount: 0.9) !important;
+        background-clip: unset;
+        color: $azul-escuro;
+      }
+    }
+
+    .menu ul {
+      gap: 20px;
+    }
+  }
+
+  @include dispositivo(mobile) {
+    justify-content: center;
+    gap: 20px;
+
+    .header-menu {
+      margin-top: 30px;
+    }
+
+    .botao {
+      transition: 0.4s;
+    }
+
+    .menu ul {
+      gap: 20px;
+    }
+  }
+}

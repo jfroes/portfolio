@@ -1,0 +1,272 @@
+$cinza: #666;
+$cinza-claro: #ccc;
+$cinza-medio: #a7a7a7;
+$cinza-escuro: #363636;
+$azul-escuro: #42446e;
+$gradiente: linear-gradient(90deg, #13b0f5 -2.06%, #e70faa 100%);
+$preto: #191919;
+$branco: #fff;
+$rosa: #e70faa;
+
+//modo escuro botao
+
+.js .adaptative {
+  background: $preto;
+  transition: 0.4s;
+
+  .header {
+    .header-menu {
+      a {
+        color: $cinza-medio;
+      }
+    }
+  }
+
+  .intro {
+    .intro-info h1 {
+      color: #d9d9d9;
+    }
+  }
+
+  .habilidades {
+    .habilidades-info {
+      h1 {
+        color: $cinza-claro;
+      }
+
+      p {
+        color: $cinza-medio;
+      }
+    }
+  }
+
+  .projetos {
+    .projetos-info {
+      h1 {
+        color: $cinza-claro;
+      }
+
+      p {
+        color: $cinza-medio;
+      }
+    }
+
+    .projetos-cards {
+      .card {
+        background: $cinza-escuro;
+        border-radius: 20px;
+        box-shadow: none;
+
+        .card-info h1,
+        .card-info p,
+        .card-info span {
+          color: $cinza-claro;
+        }
+      }
+
+      .card-links {
+        a {
+          color: $cinza-claro;
+          &.git::before {
+            content: url("../img/akar-icons_github-fill\(1\).png");
+            display: inline-block;
+          }
+          &.site::before {
+            content: url("../img/akar-icons_link-chain\(1\).png");
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+  .footer {
+    p {
+      color: $cinza-medio;
+    }
+
+    > div {
+      border-bottom: 1px solid $cinza-medio;
+    }
+    .footer-info-main {
+      h1 {
+        color: $cinza-medio;
+      }
+    }
+
+    path {
+      fill: $cinza-medio;
+    }
+  }
+
+  @include dispositivo(mobile) {
+    .intro {
+      &::before {
+        background: $cinza-medio;
+      }
+    }
+
+    .habilidades {
+      &::after {
+        background: $cinza-medio;
+      }
+    }
+
+    .footer {
+      > div {
+        border-bottom: none;
+      }
+
+      p {
+        &::before {
+          background: $cinza-medio;
+        }
+      }
+    }
+  }
+
+  @include dispositivo(tablet) {
+    .footer {
+      > div {
+        border-bottom: none;
+      }
+
+      p {
+        &::before {
+          background: $cinza-medio;
+        }
+      }
+    }
+  }
+}
+//modo escuro tema padrao do navegador
+
+@media (prefers-color-scheme: dark) {
+  .adaptative {
+    background: $preto;
+    transition: 0.4s;
+
+    .header {
+      .header-menu {
+        a {
+          color: $cinza-medio;
+        }
+      }
+    }
+
+    .intro {
+      .intro-info h1 {
+        color: #d9d9d9;
+      }
+    }
+
+    .habilidades {
+      .habilidades-info {
+        h1 {
+          color: $cinza-claro;
+        }
+
+        p {
+          color: $cinza-medio;
+        }
+      }
+    }
+
+    .projetos {
+      .projetos-info {
+        h1 {
+          color: $cinza-claro;
+        }
+
+        p {
+          color: $cinza-medio;
+        }
+      }
+
+      .projetos-cards {
+        .card {
+          background: $cinza-escuro;
+          border-radius: 20px;
+          box-shadow: none;
+
+          .card-info h1,
+          .card-info p,
+          .card-info span {
+            color: $cinza-claro;
+          }
+        }
+
+        .card-links {
+          a {
+            color: $cinza-claro;
+            &.git::before {
+              content: url("http://jose-froes-portfolio.local/wp-content/uploads/2024/03/akar-icons_github-fill1.png");
+              display: inline-block;
+            }
+            &.site::before {
+              content: url("http://jose-froes-portfolio.local/wp-content/uploads/2024/03/akar-icons_link-chain1.png");
+              display: inline-block;
+            }
+          }
+        }
+      }
+    }
+    .footer {
+      p {
+        color: $cinza-medio;
+      }
+
+      > div {
+        border-bottom: 1px solid $cinza-medio;
+      }
+      .footer-info-main {
+        h1 {
+          color: $cinza-medio;
+        }
+      }
+
+      path {
+        fill: $cinza-medio;
+      }
+    }
+
+    @include dispositivo(mobile) {
+      .intro {
+        &::before {
+          background: $cinza-medio;
+        }
+      }
+
+      .habilidades {
+        &::after {
+          background: $cinza-medio;
+        }
+      }
+
+      .footer {
+        > div {
+          border-bottom: none;
+        }
+
+        p {
+          &::before {
+            background: $cinza-medio;
+          }
+        }
+      }
+    }
+
+    @include dispositivo(tablet) {
+      .footer {
+        > div {
+          border-bottom: none;
+        }
+
+        p {
+          &::before {
+            background: $cinza-medio;
+          }
+        }
+      }
+    }
+  }
+}

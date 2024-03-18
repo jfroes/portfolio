@@ -1,0 +1,47 @@
+@mixin fonte-1($tamanho) {
+  font-family: "Poppins";
+
+  @if $tamanho == 14 {
+    font-size: 0.875rem;
+    line-height: 26px;
+    font-weight: 400;
+  } @else if $tamanho == 16 {
+    font-size: 1rem;
+    line-height: 26px;
+    font-weight: 400;
+  } @else if $tamanho == 18 {
+    font-size: 1.125rem;
+    line-height: 26px;
+    font-weight: 300;
+  } @else if $tamanho == 28 {
+    font-size: 1.75rem;
+    line-height: 26px;
+    font-weight: 500;
+  } @else if $tamanho == 32 {
+    font-size: 1.7rem;
+    line-height: 26px;
+    font-weight: 400;
+  } @else if $tamanho == 48 {
+    font-size: 3rem;
+    line-height: 1.3;
+    font-weight: 700;
+  } @else if $tamanho == 58 {
+    font-size: 3.625rem;
+    line-height: 72px;
+    font-weight: 700;
+  }
+}
+
+@mixin fonte-2($tamanho) {
+  font-family: "DM Sans";
+
+  @if $tamanho == 18 {
+    font-size: 1.125rem;
+    line-height: 26px;
+    font-weight: 400;
+  } @else if $tamanho == 20 {
+    font-size: 1.25rem;
+    line-height: 26px;
+    font-weight: 400;
+  }
+}
