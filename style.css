@@ -1,6 +1,7 @@
 @charset "UTF-8";
 body {
   transition: 0.4s;
+  background: crimson;
   color: crimson;
 }
 
