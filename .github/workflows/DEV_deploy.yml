@@ -1,7 +1,7 @@
 on:
   push:
-    branches: [main]
-name: Deploy website on MAIN
+    branches: [dev]
+name: Deploy website on DEV
 jobs:
   web-deploy:
     name: Deploy
@@ -13,7 +13,7 @@ jobs:
       - name: Sync files with SSH
         uses: easingthemes/ssh-deploy@main
 
-        # deploy main
+        # deploy DEV
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
           ARGS: "-rlgoDzvc -i --delete"
