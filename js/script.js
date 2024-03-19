@@ -34,12 +34,12 @@ function initSwiper() {
     },
     breakpoints: {
       320: {
-        slidesPerView: 1,
+        slidesPerView: 2,
         spaceBetween: 20,
       },
 
       480: {
-        slidesPerView: 1,
+        slidesPerView: 2,
         spaceBetween: 30,
       },
       640: {
