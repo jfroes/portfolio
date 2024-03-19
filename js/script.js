@@ -25,15 +25,6 @@ function initSwiper() {
     loop: true,
     grabCursor: true,
     spaceBetween: 0,
-    // freeMode: true,
-
-    // autoplay: {
-    //   delay: 1,
-    //   disableOnInteraction: true,
-    // },
-    // freeMode: true,
-    // speed: 5000,
-    // freeModeMomentum: false,
 
     // If we need pagination
     pagination: {
@@ -42,6 +33,15 @@ function initSwiper() {
       dynamicBullets: true,
     },
     breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+
+      480: {
+        slidesPerView: 1,
+        spaceBetween: 30,
+      },
       640: {
         slidesPerView: 2,
         spaceBetween: 20,
