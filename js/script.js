@@ -20,12 +20,14 @@ function darkMode() {
 function initSwiper() {
   const swiper = new Swiper(".swiper", {
     // Optional parameters
+    freeMode: true,
     direction: "horizontal",
-    slidesPerView: 3,
+    slidesPerView: 1,
     loop: true,
     grabCursor: true,
     spaceBetween: 0,
-
+    centeredSlides: true,
+    centeredSlidesBounds: true,
     // If we need pagination
     pagination: {
       el: ".swiper-pagination",
