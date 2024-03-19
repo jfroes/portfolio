@@ -486,8 +486,7 @@ a {
 }
 .projetos .projetos-cards {
   display: flex;
-  gap: 40px;
-  justify-content: center;
+  gap: 50px;
 }
 .projetos .projetos-cards .card {
   flex: 0 0 350px;
@@ -643,4 +642,4 @@ a {
     background: #42446e;
     margin: 10px auto;
   }
-} /*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
