@@ -14,6 +14,19 @@ jobs:
         uses: easingthemes/ssh-deploy@main
 
         # deploy dev
+name: Deploy website on DEV
+jobs:
+  web-deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get latest code
+        uses: actions/checkout@v4
+
+      - name: Sync files with SSH
+        uses: easingthemes/ssh-deploy@main
+
+        # deploy DEV
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
           ARGS: "-rlgoDzvc -i --delete"
