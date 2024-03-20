@@ -22,18 +22,19 @@ function initSwiper() {
     // Optional parameters
     freeMode: true,
     direction: "horizontal",
-    slidesPerView: 1,
+    slidesPerView: "auto",
     loop: true,
     grabCursor: true,
     spaceBetween: 0,
     centeredSlides: true,
-    centeredSlidesBounds: true,
+
     // If we need pagination
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
       dynamicBullets: true,
     },
+
     breakpoints: {
       320: {
         slidesPerView: 1,
@@ -41,8 +42,8 @@ function initSwiper() {
       },
 
       480: {
-        slidesPerView: 1,
-        spaceBetween: 30,
+        slidesPerView: 1.5,
+        spaceBetween: 0,
       },
       640: {
         slidesPerView: 2,
@@ -53,7 +54,7 @@ function initSwiper() {
         spaceBetween: 40,
       },
       1024: {
-        slidesPerView: 3,
+        slidesPerView: 3.5,
         spaceBetween: 50,
       },
     },
